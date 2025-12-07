@@ -1,0 +1,25 @@
+[options]
+background = 000000
+overlay_font = Monospace:12
+
+[binds]
+n = next                # Next image
+p = prev                # Previous image
+<Right> = next
+<Left> = prev
+
+# --- VIM PANNING ---
+h = pan -50 0
+j = pan 0 50
+k = pan 0 -50
+l = pan 50 0
+
+# --- ZOOMING ---
++ = zoom 1
+- = zoom -1
+x = zoom actual         # Reset to 100% size
+f = fullscreen          # Toggle fullscreen
+
+# --- UTILS ---
+q = quit
+cp = exec echo $imv_current_file | xclip -selection clipboard  # Copy path

@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 0,
+    "font": "JetBrainsMono Nerd Font 10",
+
+    // --- LAYOUT ---
+    "modules-right": ["hyprland/window", "hyprland/workspaces"],
+    "modules-center": ["clock"],    
+    "modules-left": ["battery", "pulseaudio", "network", "memory", "cpu", "tray"],
+
+
+    // --- MODULES ---
+    "hyprland/workspaces": {
+        "format": "[{id}]",
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true
+    },
+
+    "hyprland/window": {
+        "max-length": 60,
+        "separate-outputs": true
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": "{:%H:%M  //  %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    },
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "on-click": "kitty -e btop",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "RAM: {}%",
+        "on-click": "kitty -e btop"
+    },
+
+    "network": {
+        "format-wifi": "NET: {essid} ({signalStrength}%)",
+        "format-ethernet": "NET: Wired",
+        "format-disconnected": "NET: DEAD",
+        "on-click": "nm-connection-editor",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "VOL: {volume}%",
+        "format-muted": "MUTED",
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "scroll-step": 5
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT: {capacity}%",
+        "format-charging": "PWR: {capacity}%",
+        "format-plugged": "PLUG: {capacity}%"
+    }
+}

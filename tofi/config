@@ -1,0 +1,38 @@
+# --- CORE ---
+hide-cursor = true
+text-cursor = true
+history = true
+fuzzy-match = true
+
+# --- GEOMETRY (The Center Box) ---
+anchor = center
+width = 600
+height = 400
+margin-top = 0
+margin-bottom = 0
+padding-top = 20
+padding-bottom = 20
+padding-left = 20
+padding-right = 20
+outline-width = 2
+border-width = 0
+corner-radius = 0
+
+# --- VISUALS ---
+background-color = #000000
+outline-color = #333333
+text-color = #bbbbbb
+
+# The "Active" item
+selection-color = #00ff00
+selection-background = #1a1a1a
+
+# Font
+font = "JetBrainsMono Nerd Font"
+font-size = 14
+
+# --- BEHAVIOR ---
+horizontal = false
+num-results = 10
+result-spacing = 5
+prompt-text = " SEARCH :: "

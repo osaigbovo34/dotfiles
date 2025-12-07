@@ -1,0 +1,84 @@
+/* --- GLOBAL RESET --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+/* --- THE BAR ITSELF --- */
+window#waybar {
+    background-color: transparent;
+    color: #cccccc;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* --- WORKSPACES --- */
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #555555;
+}
+
+#workspaces button.active {
+    color: #00ff00; /* Matrix Green */
+}
+
+#workspaces button:hover {
+    background-color: #1a1a1a;
+}
+
+/* --- WINDOW TITLE --- */
+#window {
+    color: #888888;
+    padding: 0 10px;
+}
+
+/* --- RIGHT MODULES --- */
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray {
+    padding: 0 10px;
+    background-color: transparent;
+    color: #cccccc;
+}
+
+/* --- ALERTS --- */
+#battery.charging, #battery.plugged {
+    color: #00ff00;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #ff0000;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected {
+    color: #ff0000;
+}
+
+#pulseaudio.muted {
+    color: #555555;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes blink {
+    to {
+        background-color: #000000;
+        color: #ff0000;
+    }
+}
