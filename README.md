@@ -4,8 +4,6 @@
 
 My personal configuration for the **Fortress** (Arch Linux x86_64). Optimized for keyboard-driven workflows, minimalism, and reliability.
 
-![Desktop Preview](path/to/screenshot.png)
-
 ## The Stack
 
 | Component | Choice |
